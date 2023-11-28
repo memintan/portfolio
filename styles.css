@@ -13,7 +13,7 @@ body {
 
 /* Style the header */
 .site-header {
-    background: #D3D3D3; /* Light gray background */
+    background: #333;
     color: #fff;
     padding: 1rem 0;
 }
@@ -28,7 +28,6 @@ body {
     color: #fff;
     text-decoration: none;
     margin-left: 20px;
-    font-size: 0.8rem; /* Same size as social links */
 }
 
 /* Navigation styles */
@@ -45,22 +44,20 @@ body {
 }
 
 .site-navigation a {
-    color: #0000FF; /* Blue color for all navigation links */
+    color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1rem; /* Adjust font size as needed */
 }
 
 .brand {
     font-weight: bold;
-    font-size: 2rem; /* Make the font size larger */
-    color: #00008B; /* Dark blue color */
+    font-size: 1.5rem;
 }
 
 /* Hero section */
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
     height: 80vh; /* Adjust as needed */
     display: flex;
     align-items: center;
@@ -73,39 +70,9 @@ body {
 }
 
 .social-links a {
-    color: #fff; /* Change color if needed */
-    font-size: 0.8rem; /* Smaller font size for social links text */
-    display: inline-flex; /* To align icons with text */
-    align-items: center; /* Center icon with text vertically */
-    margin-left: 10px; /* Spacing between links */
-}
-
-.social-links i {
-    margin-right: 5px; /* Spacing between icon and text */
-}
-
-/* Example of changing icon sizes */
-.social-links .fa {
-    font-size: 1.2rem; /* Larger font size for icons */
+    color: #fff;
+    margin-left: 10px;
 }
 
 /* Add other styles below */
 /* ... */
-
-
-
-
-/* Brand style */
-
-
-/* Header background */
-
-
-/* Navigation link styles */
-
-
-/* Social Links styles */
-
-
-/* Update contact info link styles to match social links if needed */
-
