@@ -13,7 +13,7 @@ body {
 
 /* Style the header */
 .site-header {
-    background: #333;
+    background: #D3D3D3; /* Light gray background */
     color: #fff;
     padding: 1rem 0;
 }
