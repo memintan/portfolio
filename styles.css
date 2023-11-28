@@ -36,15 +36,17 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+
 }
 
 .site-navigation ul {
     list-style: none;
     display: flex;
+
 }
 
 .site-navigation a {
-    color: #fff;
+    color: #0000FF; /* Blue color for 'Home', 'Projects', 'About Me' */
     padding: 0.5rem 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -80,6 +82,42 @@ body {
     color: #fff;
     margin-left: 5px;
 }
+
+.bi-twitter-x {
+    fill: #1DA1F2; /* Twitter blue color */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.fa-instagram {
+    color: #C13584; /* Instagram color */
+    margin-right: 5px; /* Space between icon and text */
+}
+.fa-facebook-square {
+    color: #4267B2; /* Facebook blue color */
+    margin-right: 5px; /* Space between icon and text */
+}
+.fa-linkedin {
+    color: #0077B5; /* LinkedIn color */
+    margin-right: 5px; /* Space between icon and text */
+}
+.phone-link {
+    color: #000000; /* Color of the text */
+    text-decoration: none; /* Optional: removes underline */
+}
+
+.phone-link .fas {
+    margin-right: 5px; /* Space between icon and text */
+}
+.email-link {
+    color: #000000; /* Color of the text */
+    text-decoration: none; /* Optional: removes underline */
+}
+
+.email-link .fas {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+
 
 /* Add other styles below */
 /* ... */
