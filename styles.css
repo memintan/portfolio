@@ -23,9 +23,20 @@
 
 /* Social Links styles */
 .social-links a {
-    color: #fff;
-    margin-left: 10px;
-    font-size: 0.8rem; /* Smaller font size for social links */
+    color: #fff; /* Change color if needed */
+    font-size: 0.8rem; /* Smaller font size for social links text */
+    display: inline-flex; /* To align icons with text */
+    align-items: center; /* Center icon with text vertically */
+    margin-left: 10px; /* Spacing between links */
+}
+
+.social-links i {
+    margin-right: 5px; /* Spacing between icon and text */
+}
+
+/* Example of changing icon sizes */
+.social-links .fa {
+    font-size: 1.2rem; /* Larger font size for icons */
 }
 
 /* Update contact info link styles to match social links if needed */
