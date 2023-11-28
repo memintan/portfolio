@@ -27,7 +27,7 @@ body {
 .contact-info a {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 /* Navigation styles */
@@ -58,7 +58,7 @@ body {
 
 /* Hero section */
 .hero {
-    background: url('../images/hero.jpg') no-repeat center center/cover;
+    background: url('../images/hero.png') no-repeat center center/cover;
     height: 80vh; /* Adjust as needed */
     display: flex;
     align-items: center;
