@@ -50,6 +50,12 @@ body {
     text-transform: uppercase;
 }
 
+.site-navigation .brand {
+    font-weight: bold;
+    font-size: 2rem; /* Larger font size */
+    color: #00008B !important; /* Dark blue color, using !important to override other styles */
+}
+
 .brand {
     font-weight: bold;
     font-size: 2rem; /* Make the font size larger */
