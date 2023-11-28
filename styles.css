@@ -24,7 +24,10 @@ body {
 
 /* Style the header */
 .site-header {
-    background: #D3D3D3; /* Light gray background */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+    background: #333; /* Light gray background D3D3D3 */
     color: #fff;
     padding: 1rem 0;
 }
@@ -66,7 +69,7 @@ body {
 .site-navigation .brand {
     font-weight: bold;
     font-size: 2rem; /* Larger font size */
-    color: #00008B !important; /* Dark blue color, using !important to override other styles */
+    color: #1DA1F2 !important; /* Dark blue color, using !important to override other styles */
 }
 
 .brand {
@@ -155,6 +158,27 @@ body {
 .email-link .fas {
     margin-right: 5px; /* Space between icon and text */
 }
+
+.site-footer {
+    position: fixed; /* Add position relative */
+    background-color: #333; /* Dark background for the footer */
+    color: white;
+    text-align: center;
+    padding: 80px 0; /* Your specified padding */
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.container {
+    position: absolute; /* Position the container absolutely */
+    bottom: 0; /* Align to the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    width: 80%;
+    max-width: 1200px; /* Adjust the max-width as necessary */
+}
+
 
 
 
