@@ -1,18 +1,49 @@
-/* Brand style */
-.brand {
-    font-weight: bold;
-    font-size: 2rem; /* Make the font size larger */
-    color: #00008B; /* Dark blue color */
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* This is a common font, you can change it as needed */
 }
 
-/* Header background */
+/* Style the body */
+body {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Style the header */
 .site-header {
     background: #D3D3D3; /* Light gray background */
     color: #fff;
     padding: 1rem 0;
 }
 
-/* Navigation link styles */
+.contact-info {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.8rem; /* Same size as social links */
+}
+
+/* Navigation styles */
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.site-navigation ul {
+    list-style: none;
+    display: flex;
+}
+
 .site-navigation a {
     color: #0000FF; /* Blue color for all navigation links */
     padding: 0.5rem 1rem;
@@ -21,7 +52,26 @@
     font-size: 1rem; /* Adjust font size as needed */
 }
 
-/* Social Links styles */
+.brand {
+    font-weight: bold;
+    font-size: 2rem; /* Make the font size larger */
+    color: #00008B; /* Dark blue color */
+}
+
+/* Hero section */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 80vh; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Social Links */
+.social-links {
+    margin-left: auto;
+}
+
 .social-links a {
     color: #fff; /* Change color if needed */
     font-size: 0.8rem; /* Smaller font size for social links text */
@@ -39,10 +89,23 @@
     font-size: 1.2rem; /* Larger font size for icons */
 }
 
+/* Add other styles below */
+/* ... */
+
+
+
+
+/* Brand style */
+
+
+/* Header background */
+
+
+/* Navigation link styles */
+
+
+/* Social Links styles */
+
+
 /* Update contact info link styles to match social links if needed */
-.contact-info a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.8rem; /* Same size as social links */
-}
+
