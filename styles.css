@@ -154,6 +154,7 @@ body {
 
 .phone-link .fas {
     margin-right: 5px; /* Space between icon and text */
+    margin-left: 15px;
 }
 .email-link {
     color: #000000; /* Color of the text */
