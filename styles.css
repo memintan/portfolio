@@ -52,12 +52,13 @@ body {
 
 .brand {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Make the font size larger */
+    color: #00008B; /* Dark blue color */
 }
 
 /* Hero section */
 .hero {
-    background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
+    background: url('hero.png') no-repeat center center/cover;
     height: 80vh; /* Adjust as needed */
     display: flex;
     align-items: center;
@@ -71,7 +72,7 @@ body {
 
 .social-links a {
     color: #fff;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 /* Add other styles below */
