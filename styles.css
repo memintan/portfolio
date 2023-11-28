@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.contact-info a {
+    margin-right: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.site-navigation ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.site-navigation a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.social-links a {
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
