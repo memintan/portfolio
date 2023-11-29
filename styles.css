@@ -58,7 +58,8 @@ body {
     font-weight: bold;
     font-size: 2rem;
     color: #fff;
-    text-transform: uppercase;
+    font-family: 'Outfit',sans-serif;
+    text-decoration: none;
     /* Centering the brand in the available space */
 }
 
@@ -78,8 +79,10 @@ body {
 
 .navigation a {
     color: #fff; /* Blue color for 'Home', 'Projects', 'About Me' */
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     text-decoration: none;
+    font-family: 'Outfit',sans-serif;
+    font-size: 1.2rem; /* Adjust size as necessary */
 }
 
 
@@ -284,12 +287,36 @@ body {
 /* ... */
 .contact-page {
     font-family: 'Arial', sans-serif;
+    background-color: #787c82;
+    margin-top: 10px;
+
+}
+
+.contact-page .hero {
+    /* Style your hero section */
+    height: 38vh; /* Example height - adjust as needed */
+    background-image: url('images/heroContact.png');
+    background-size: 800px 400px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #787c82;
+    /* Add more styles as per your design */
+}
+@media (max-width: 768px) {
+    .contact-page .hero {
+        height: 30vh; /* Shorter height on smaller screens */
+        /* Other responsive adjustments */
+    }
 }
 
 .contact-section {
-    width: 80%;
+    width: 47%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px;
+    background-color: #787c82;
+
 }
 
 #contact-form {
@@ -299,10 +326,10 @@ body {
 
 #contact-form input,
 #contact-form textarea {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 5px solid #ccc;
+    border-radius: 8px;
 }
 
 #contact-form button {
@@ -310,10 +337,48 @@ body {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-#contact-form button:hover {
-    background-color: #0056b3;
+#message {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical; /* Allows vertical resizing only */
 }
+
+#contact-form button:hover {
+    background-color: #b32d2e;
+}
+
+/* About Me Page below */
+/* ... */
+
+.aboutme-page main {
+    background-image: url('images/aboutMe.png');
+    background-attachment: fixed; /* Gives a parallax scrolling effect */
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Dark color for text for readability */
+    padding: 50px 20px;
+    font-family: 'Outfit', sans-serif; /* Consistent with your brand font */
+}
+
+.profile-summary {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.profile-photo {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Circular photo */
+    float: left; /* Aligns photo to the left of the text */
+    margin-right: 20px;
+}
+
