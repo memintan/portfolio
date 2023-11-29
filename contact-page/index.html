@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehmet Emin Tan</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <title>Contact Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
 </head>
-<body class="home-page">
+<body class="contact-page">
 <header class="header">
     <div class="contact-info">
         <div class="contact-details">
@@ -49,32 +48,27 @@
     <a href="#" class="brand">MEHMET EMIN TAN</a>
     <nav class="navigation">
         <ul>
-            <li><a href="./">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="contact-page/">Contact</a></li>
+            <li><a href="./">Contact</a></li>
             <!-- Add additional navigation items here -->
         </ul>
 
     </nav>
 </header>
-<main>
-    <section class="hero"></section>
-
-</main>
-<!-- Footer content goes here -->
 <footer class="footer">
     <div class="left">
 
-            <a href="https://www.google.com/maps/place/Richmond,+TX/@29.5893688,-95.799621,13z/data=!3m1!4b1!4m6!3m5!1s0x86411de1844ffac5:0x3b7a2d2657c7f42e!8m2!3d29.5821811!4d-95.7607832!16zL20vMDEwMWRn?entry=ttu" class="home-link">
-                <i class="fas fa-home"></i> Richmond, TX
-            </a>
-            <a href="tel:+18328556339" class="phone-link">
-                <i class="fas fa-mobile-alt"></i> +1 (832) 855 6339
-            </a>
-            <a href="mailto:mehmetetan@gmail.com" class="email-link">
-                <i class="fas fa-envelope"></i> mehmetetan@gmail.com
-            </a>
+        <a href="https://www.google.com/maps/place/Richmond,+TX/@29.5893688,-95.799621,13z/data=!3m1!4b1!4m6!3m5!1s0x86411de1844ffac5:0x3b7a2d2657c7f42e!8m2!3d29.5821811!4d-95.7607832!16zL20vMDEwMWRn?entry=ttu" class="home-link">
+            <i class="fas fa-home"></i> Richmond, TX
+        </a>
+        <a href="tel:+18328556339" class="phone-link">
+            <i class="fas fa-mobile-alt"></i> +1 (832) 855 6339
+        </a>
+        <a href="mailto:mehmetetan@gmail.com" class="email-link">
+            <i class="fas fa-envelope"></i> mehmetetan@gmail.com
+        </a>
         <div class="social-links-footer">
             <a href="https://github.com/memintan">
                 <i class="fab fa-github"></i>
@@ -101,5 +95,21 @@
         <!-- Add additional footer content here -->
     </div>
 </footer>
+
+<main>
+    <section class="contact-section">
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="email" id="email" name="email" placeholder="Your Email">
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</main>
+
+
+
+
+<script src="script.js"></script>
 </body>
 </html>

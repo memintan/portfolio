@@ -23,7 +23,7 @@ body {
 }
 
 /* Style the header */
-.site-header {
+.header {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -64,19 +64,19 @@ body {
 
 
 /* Navigation styles */
-.site-navigation {
+.navigation {
     display: flex;
     align-items: center;
 }
 
-.site-navigation ul {
+.navigation ul {
     list-style: none;
     display: flex;
     margin-left: auto;
 
 }
 
-.site-navigation a {
+.navigation a {
     color: #fff; /* Blue color for 'Home', 'Projects', 'About Me' */
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -280,8 +280,40 @@ body {
 
 
 
-
-
-
 /* Add other styles below */
 /* ... */
+.contact-page {
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
