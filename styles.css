@@ -127,45 +127,65 @@ body {
 
 .social-links a {
     color: #fff;
-    margin-left: 5px;
+    margin-left: 1px;
 }
 
 .bi-twitter-x {
     fill: #1DA1F2; /* Twitter blue color */
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 1px; /* Space between icon and text */
+    margin-left: 5px;
 }
 
 .fa-instagram {
     color: #C13584; /* Instagram color */
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 1px; /* Space between icon and text */
+    margin-left: 5px;
 }
 .fa-facebook-square {
     color: #4267B2; /* Facebook blue color */
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 1px; /* Space between icon and text */
+    margin-left: 5px;
 }
 .fa-linkedin {
     color: #0077B5; /* LinkedIn color */
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 1px; /* Space between icon and text */
+    margin-left: 5px;
+}
+.fa-github {
+    color: #fff; /* LinkedIn color */
+    margin-right: 1px; /* Space between icon and text */
 }
 .phone-link {
-    color: #000000; /* Color of the text */
+    color: #fff; /* Color of the text */
+    text-decoration: none; /* Optional: removes underline */
+}
+.home-link {
+    color: #fff; /* Color of the text */
     text-decoration: none; /* Optional: removes underline */
 }
 
-.phone-link .fas {
-    margin-right: 5px; /* Space between icon and text */
-    margin-left: 15px;
+.fas.fa-mobile-alt {
+    color: #fff; /* Change color as needed */
+    margin-right: 3px; /* Space between icon and text */
+    margin-left: 10px;
+    /* Add any other styles you need */
+}
+.fas.fa-home {
+    color: #fff; /* Change color as needed */
+    margin-right: 3px; /* Space between icon and text */
+    margin-left: 3px;
+    /* Add any other styles you need */
 }
 .email-link {
-    color: #000000; /* Color of the text */
+    color: #fff; /* Color of the text */
     text-decoration: none; /* Optional: removes underline */
 }
 
 .email-link .fas {
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 3px; /* Space between icon and text */
 }
 
-.site-footer {
+.footer {
     position: fixed; /* Add position relative */
     background-color: #787c82; /* Dark background for the footer */
     color: white;
@@ -184,6 +204,81 @@ body {
     width: 80%;
     max-width: 1200px; /* Adjust the max-width as necessary */
 }
+
+/* Style for the left section in the footer */
+/* Style for the left section in the footer */
+.footer .left {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+/* Style for links in the left section */
+.footer .left a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/* Specific style for social media links to display them in a row */
+.footer .left a {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align icon and text vertically in the middle */
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px; /* Space between links, adjust as needed */
+}
+
+.footer .left a i,
+.footer .left a svg {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Existing styles for .footer and .left */
+
+/* Style for the social-links-footer */
+.footer .left .social-links-footer {
+    display: flex; /* Display these links in a row */
+    align-items: center; /* Align icons and text vertically */
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-top: 10px; /* Optional: add some space above the social links */
+}
+
+/* Style for each social link */
+.footer .left .social-links-footer a {
+    display: inline-flex; /* Display links as inline-flex to keep them in line */
+    align-items: center; /* Align icon and text vertically */
+    margin-right: 10px; /* Space between icons */
+    text-decoration: none; /* Optional: removes underline from links */
+    color: #fff; /* Text color for links */
+}
+
+/* Icon styling */
+.footer .left .social-links-footer a i,
+.footer .left .social-links-footer a svg {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 2.0em; /* Increase the font size to make icons larger */
+}
+
+.footer .left .home-link,
+.footer .left .phone-link,
+.footer .left .email-link {
+    font-weight: bold; /* Makes the text bold */
+}
+
+/* Increasing the size of the icons in these links */
+.footer .left .home-link i,
+.footer .left .phone-link i,
+.footer .left .email-link i {
+    font-size: 1.8em; /* Adjust the size as needed */
+}
+
+
 
 
 
