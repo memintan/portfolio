@@ -1,109 +1,244 @@
+/* Base Element Styles */
 /* Reset some basic elements */
 body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* This is a common font, you can change it as needed */
+    font-family: 'Open Sans', sans-serif; /* Common font for consistency */
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Style the body */
+/* Universal Box Sizing */
+*, *:before, *:after {
+    box-sizing: border-box; /* Ensures padding does not affect total width/height */
+}
+
+/* Body Style */
 body {
-    color: #555;
-    line-height: 1.6;
-    overflow-x: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    color: #555; /* Default text color */
+    line-height: 1.6; /* Default line height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
 }
 
-/* Style the header */
+/* Header Styles */
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #787c82;
-    color: #fff;
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around; /* Distribute space around items */
-    height: 80px;
+    position: sticky; /* Keeps the header at the top of the viewport */
+    top: 0; /* Aligns to the top */
+    z-index: 1000; /* Ensures the header stays above other content */
+    background: #787c82; /* Sets a dark grey background */
+    color: #fff; /* White text color for contrast */
+    padding: 0.4rem 0; /* Vertical padding for aesthetic spacing */
+    display: flex; /* Enables flexible box layout */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Distributes items with space around */
+    height: auto; /* Fixed height of the header */
+    min-height: 40px; /* Sets a minimum height for the header */
+
+}
+.brand {
+    font-weight: bold; /* Bold font for the brand name */
+    font-size: 2rem; /* Larger font size for visibility */
+    color: #fff; /* White color for the brand text */
+    font-family: 'Outfit', sans-serif; /* Specific font-family for branding */
+    text-decoration: none; /* Removes underline from links */
+    z-index: 1100; /* Ensures brand is above other elements */
+    margin-left: 1rem; /* Adds margin to separate from the screen edge */
 }
 
 .contact-info {
+    display: flex; /* Enables flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns items to the start (left) */
+    padding: 0 2rem; /* Horizontal padding for spacing */
+}
+
+.contact-details, .social-links {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers items vertically */
+}
+
+.contact-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns children to the start (left) */
-    padding: 0 2rem;
+    align-items: flex-start;
 }
-.contact-details, .social-links {
+
+.contact-details a {
     display: flex;
     align-items: center;
-    margin-bottom: 5px; /* Space between contact details and social links */
+    margin-bottom: 5px;
+}
+/* Ensuring icons are visible */
+.contact-details i, .social-links i {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.fas, .fab {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
 }
 
 .contact-info a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: px;
+    color: #fff; /* White links */
+    text-decoration: none; /* No underline */
 }
 
-.brand {
-    font-weight: bold;
-    font-size: 2rem;
-    color: #fff;
-    font-family: 'Outfit',sans-serif;
-    text-decoration: none;
-    /* Centering the brand in the available space */
+.contact-details a i, .social-links a i, .social-links a svg {
+    margin-right: 10px; /* Space between icon and text */
 }
 
-
-/* Navigation styles */
+/* Navigation Styles */
 .navigation {
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertical center */
 }
 
 .navigation ul {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-
+    list-style: none; /* No list bullets */
+    display: flex; /* Horizontal layout for links */
+    margin-left: auto; /* Push to the right */
+    gap: 5px;
 }
 
 .navigation a {
-    color: #fff; /* Blue color for 'Home', 'Projects', 'About Me' */
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-    font-family: 'Outfit',sans-serif;
-    font-size: 1.2rem; /* Adjust size as necessary */
+    color: #fff; /* White links */
+    padding: 0.5rem 2rem; /* Padding around links */
+    text-decoration: none; /* No underline */
+    font-family: 'Outfit', sans-serif; /* Custom font */
+    font-size: 1.2rem; /* Slightly larger text */
+}
+
+.hamburger-menu {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 2rem;
+    width: 2rem;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 0.25rem;
+    background: #fff;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-details a, .social-links a {
+            font-size: 0.9rem; /* Adjust font size for smaller screens */
+        }
+
+    .contact-details {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start; /* Aligns items to start (left) */
+    }
+
+    .contact-details a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px; /* Adds space between email and phone links */
+    }
+
+        /* Keep social links in a row */
+    .social-links {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px; /* Add a little space above social links */
+        margin-left: 0px;
+    }
+    /* Hamburger menu style */
+    .hamburger-menu {
+        display: flex; /* Shows the hamburger icon */
+        cursor: pointer; /* Indicates clickable area */
+    }
+
+    /* Hide regular navigation on small screens */
+    .navigation ul {
+        display: none; /* Hides the navigation links */
+    }
+
+    /* Adjust contact info layout on small screens */
+    .contact-info {
+        align-items: center; /* Center align contact info */
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center; /* Centers items */
+    }
+
+    /* Adjusts brand font size for small screens */
+    .brand {
+        font-size: 1.5rem; /* Slightly smaller font size */
+    }
+
+    /* Styles when hamburger menu is active */
+    .navigation.active ul {
+        display: flex; /* Shows the navigation links */
+        flex-direction: column; /* Stacks links vertically */
+        position: absolute; /* Positions the menu below the header */
+        top: 80px; /* Distance from the top */
+        left: 0; /* Aligns to the left */
+        right: 0; /* Aligns to the right */
+        background: #787c82; /* Background color */
+        padding: 1rem; /* Padding around the links */
+        align-items: center; /* Centers the links */
+    }
+
+    .navigation.active ul li {
+        margin-bottom: 1rem; /* Adds space between links */
+    }
+
+    .navigation.active a {
+        padding: 0.5rem 1rem; /* Adjusts padding for each link */
+    }
+    .header {
+            height: smaller-header-height; /* Adjust for mobile */
+        }
+    .footer {
+        height: smaller-footer-height; /* Adjust for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reduces header padding on very small screens */
+    .header {
+        padding: 1rem 0; /* Decreases vertical padding */
+    }
+
+    .contact-info {
+        padding: 0 1rem; /* Reduced side padding */
+    }
+
+    .brand {
+        font-size: 1.2rem; /* Reduces font size further for very small screens */
+    }
 }
 
 
-/* Hero section */
+/* Hero Section Styles */
+/* Adjusting Hero Section */
 .hero {
-    background: url('images/hero.png') no-repeat center center/cover;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    position: relative;
+    position: relative; /* Relative positioning within the normal document flow */
+    background: url('images/hero.png') no-repeat center center;
+    background-size: contain; /* Cover the entire area without distorting the image */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 0px; /* Space for the header; adjust as per your header's height */
+    margin-bottom: 0px; /* Space for the footer; adjust as per your footer's height */
+    min-height: calc(100vh - 200px); /* Adjust total height to account for header and footer */
+    background-color: #121212;
 }
-.hero h1 {
-    color: #fff; /* Or any color that contrasts well with your hero image */
-    font-size: 3rem; /* Adjust size as necessary */
-    margin: 0;
-    padding: 0;
-}
+
+/* Adjustments for the ::before pseudo-element */
 .hero::before {
     content: '';
     position: absolute;
@@ -111,28 +246,42 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as necessary */
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem; /* Smaller text for mobile devices */
-    }
-}
-*, *:before, *:after {
-    box-sizing: border-box;
+
+.hero h1 {
+    color: #fff; /* White text */
+    font-size: 3rem; /* Large text */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
 }
 
-/* Social Links */
+/* Mobile Responsiveness for Hero */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* Smaller text for mobile */
+    }
+    .hero {
+            height: calc(100vh - (smaller-header-height + smaller-footer-height));
+            top: smaller-header-height; /* Adjust for smaller header height on mobile devices */
+        }
+}
+
+/* Social Links Styles */
 .social-links {
-    margin-left: auto;
+    margin-left: 0px; /* Push to the right */
 }
 
 .social-links a {
-    color: #fff;
-    margin-left: 1px;
+    color: #fff; /* White links */
+    margin-left: 1px; /* Small margin for spacing */
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 3px; /* Space between social icons */
 }
 
+/* Specific Icon Styles */
 .bi-twitter-x {
     fill: #1DA1F2; /* Twitter blue color */
     margin-right: 1px; /* Space between icon and text */
@@ -158,227 +307,205 @@ body {
     color: #fff; /* LinkedIn color */
     margin-right: 1px; /* Space between icon and text */
 }
-.phone-link {
-    color: #fff; /* Color of the text */
-    text-decoration: none; /* Optional: removes underline */
-}
-.home-link {
-    color: #fff; /* Color of the text */
-    text-decoration: none; /* Optional: removes underline */
+
+.home-link{
+    margin-left: -7px;
 }
 
-.fas.fa-mobile-alt {
-    color: #fff; /* Change color as needed */
-    margin-right: 3px; /* Space between icon and text */
-    margin-left: 10px;
-    /* Add any other styles you need */
+/* Link Styles */
+.phone-link, .home-link, .email-link {
+    color: #fff; /* White text */
+    text-decoration: none; /* No underline */
 }
-.fas.fa-home {
-    color: #fff; /* Change color as needed */
+
+/* Icon Styles */
+.fas.fa-mobile-alt, .fas.fa-home {
+    color: #fff; /* White icons */
     margin-right: 3px; /* Space between icon and text */
-    margin-left: 3px;
-    /* Add any other styles you need */
-}
-.email-link {
-    color: #fff; /* Color of the text */
-    text-decoration: none; /* Optional: removes underline */
+    margin-left: 5px; /* Space before icon */
 }
 
 .email-link .fas {
     margin-right: 3px; /* Space between icon and text */
 }
 
+/* Footer Styles */
 .footer {
-    position: fixed; /* Add position relative */
-    background-color: #787c82; /* Dark background for the footer */
-    color: white;
-    text-align: center;
-    padding: 80px 0; /* Your specified padding */
-    bottom: 0;
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Vertical alignment */
+    position: fixed; /* Fixed at bottom */
+    background-color: #787c82; /* Dark grey background */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    padding: 50px 10px; /* Padding */
+    bottom: 0; /* Bottom of viewport */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Above other elements */
+    height: 100px; /* Example height for footer */
     width: 100%;
-    z-index: 1000; /* Ensure it's above other elements */
+    bottom: 1px;
 }
 
 .container {
-    position: absolute; /* Position the container absolutely */
-    bottom: 0; /* Align to the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust horizontal centering */
-    width: 80%;
-    max-width: 1200px; /* Adjust the max-width as necessary */
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* At the bottom */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 80%; /* Width of the container */
+    max-width: 1200px; /* Maximum width */
 }
 
-/* Style for the left section in the footer */
-/* Style for the left section in the footer */
+/* Left Section of Footer */
 .footer .left {
-    position: absolute;
-    left: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
+    position: absolute; /* Positions the element absolutely within its parent */
+    left: 50px; /* Positions the element 50 pixels from the left of its parent */
+    top: 50%; /* Positions the element at the vertical center of its parent */
+    transform: translateY(-50%); /* Adjusts the element's position to be truly centered vertically */
+    display: flex; /* Enables flexbox layout for the contents */
+    flex-direction: column; /* Stacks child elements vertically */
+    align-items: flex-start; /* Aligns child elements to the start (left) */
 }
 
-/* Style for links in the left section */
 .footer .left a {
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 5px;
+    color: #fff; /* White links */
+    text-decoration: none; /* No underline */
 }
 
-/* Specific style for social media links to display them in a row */
-.footer .left a {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align icon and text vertically in the middle */
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 5px; /* Space between links, adjust as needed */
-}
-
-.footer .left a i,
-.footer .left a svg {
+.footer .left a i, .footer .left a svg {
     margin-right: 10px; /* Space between icon and text */
 }
-
-/* Existing styles for .footer and .left */
-
-/* Style for the social-links-footer */
-.footer .left .social-links-footer {
-    display: flex; /* Display these links in a row */
-    align-items: center; /* Align icons and text vertically */
-    justify-content: flex-start; /* Align items to the start (left) */
-    margin-top: 10px; /* Optional: add some space above the social links */
-}
-
-/* Style for each social link */
-.footer .left .social-links-footer a {
-    display: inline-flex; /* Display links as inline-flex to keep them in line */
-    align-items: center; /* Align icon and text vertically */
-    margin-right: 10px; /* Space between icons */
-    text-decoration: none; /* Optional: removes underline from links */
-    color: #fff; /* Text color for links */
-}
-
-/* Icon styling */
-.footer .left .social-links-footer a i,
-.footer .left .social-links-footer a svg {
-    margin-right: 5px; /* Space between icon and text */
-    font-size: 2.0em; /* Increase the font size to make icons larger */
-}
-
-.footer .left .home-link,
-.footer .left .phone-link,
-.footer .left .email-link {
+.footer .left .home-link, .footer .left .phone-link, .footer .left .email-link {
     font-weight: bold; /* Makes the text bold */
 }
-
 /* Increasing the size of the icons in these links */
-.footer .left .home-link i,
-.footer .left .phone-link i,
-.footer .left .email-link i {
+.footer .left .home-link i, .footer .left .phone-link i, .footer .left .email-link i {
     font-size: 1.8em; /* Adjust the size as needed */
 }
 
+/* Right Section of Footer */
+.footer .right {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: flex-end; /* Align to end (right) */
+    flex-grow: 1;
+}
 
+.footer .right .social-links-footer {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertical alignment */
+    justify-content: flex-start; /* Start alignment */
+    margin-left: auto;
+}
 
-/* Add other styles below */
-/* ... */
+.footer .right .social-links-footer a {
+    display: inline-flex; /* Inline flexbox */
+    align-items: center; /* Vertical alignment */
+    margin-right: 10px; /* Space between icons */
+    text-decoration: none; /* No underline */
+    color: #fff; /* White links */
+}
+
+.footer .right .social-links-footer a i,
+.footer .right .social-links-footer a svg {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 2.0em; /* Larger icons */
+}
+
+/* Contact Page Specific Styles */
 .contact-page {
-    font-family: 'Arial', sans-serif;
-    background-color: #787c82;
-    margin-top: 10px;
-
+    font-family: 'Arial', sans-serif; /* Specific font for contact page */
+    background-color: #787c82; /* Background color */
+    margin-top: 10px; /* Top margin */
 }
 
 .contact-page .hero {
-    /* Style your hero section */
-    height: 38vh; /* Example height - adjust as needed */
-    background-image: url('images/heroContact.png');
-    background-size: 800px 400px;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #787c82;
-    /* Add more styles as per your design */
+    /* Styles for hero section on contact page */
+    height: 38vh; /* Height */
+    background-image: url('images/heroContact.png'); /* Background image */
+    background-size: 800px 400px; /* Size of the background image */
+    background-position: center; /* Center the background */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    background-color: #787c82; /* Background color */
 }
+
 @media (max-width: 768px) {
     .contact-page .hero {
-        height: 30vh; /* Shorter height on smaller screens */
-        /* Other responsive adjustments */
+        height: 30vh; /* Shorter height on mobile */
     }
 }
 
 .contact-section {
-    width: 47%;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: #787c82;
-
+    width: 47%; /* Width of the section */
+    margin: 0 auto; /* Centering */
+    padding: 50px; /* Padding */
+    background-color: #787c82; /* Background color */
 }
 
+/* Contact Form Styles */
 #contact-form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flex layout for the form elements */
+    flex-direction: column; /* Arrange elements vertically */
 }
 
-#contact-form input,
-#contact-form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 5px solid #ccc;
-    border-radius: 8px;
+#contact-form input, #contact-form textarea {
+    margin-bottom: 10px; /* Space below each input/textarea */
+    padding: 10px; /* Padding inside input/textarea */
+    border: 5px solid #ccc; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
 }
 
 #contact-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#message {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    resize: vertical; /* Allows vertical resizing only */
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 #contact-form button:hover {
-    background-color: #b32d2e;
+    background-color: #b32d2e; /* Darker blue on hover */
 }
 
-/* About Me Page below */
-/* ... */
+#message {
+    width: 100%; /* Full width of the container */
+    height: 100px; /* Fixed height */
+    padding: 10px; /* Padding inside the textarea */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
+    resize: vertical; /* Allow only vertical resizing */
+}
 
+/* About Me Page Styles */
 .aboutme-page main {
-    background-image: url('images/aboutMe.png');
-    background-attachment: fixed; /* Gives a parallax scrolling effect */
-    background-size: cover;
-    background-position: center;
-    color: #333; /* Dark color for text for readability */
-    padding: 50px 20px;
-    font-family: 'Outfit', sans-serif; /* Consistent with your brand font */
+    background-image: url('images/aboutMe.png'); /* Background image for the main content */
+    background-attachment: fixed; /* Fixed background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    color: #333; /* Dark color for text */
+    padding: 50px 20px; /* Padding around the content */
+    font-family: 'Outfit', sans-serif; /* Consistent font with the brand */
+    min-height: 100vh; /* Minimum height to cover full viewport */
 }
 
 .profile-summary {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the summary box */
+    margin: 20px 0; /* Margin above and below the summary box */
 }
 
 .profile-photo {
-    width: 150px; /* Adjust as needed */
-    height: auto;
-    border-radius: 50%; /* Circular photo */
-    float: left; /* Aligns photo to the left of the text */
-    margin-right: 20px;
+    width: 150px; /* Width of the photo */
+    height: auto; /* Auto height to maintain aspect ratio */
+    border-radius: 50%; /* Circular shape */
+    float: left; /* Float to the left side */
+    margin-right: 20px; /* Margin to the right of the photo */
 }
+
+/* Additional styles can be added below */
+/* ... */
 

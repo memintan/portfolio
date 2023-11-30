@@ -19,6 +19,7 @@
                     <a href="mailto:mehmetetan@gmail.com" class="email-link">
                         <i class="fas fa-envelope"></i> mehmetetan@gmail.com
                     </a>
+
                     <a href="tel:+18328556339" class="phone-link">
                         <i class="fas fa-mobile-alt"></i> +1 (832) 855 6339
                     </a>
@@ -27,37 +28,41 @@
                     <br>
 
                     <a href="https://github.com/memintan">
-                        <i class="fab fa-github"></i> GitHub
+                        <i class="fab fa-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/mehmetemintan">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                        <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://www.instagram.com/memintan/">
-                        <i class="fab fa-instagram"></i> Instagram
+                        <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://www.facebook.com/memintan">
-                        <i class="fab fa-facebook-square"></i> Facebook
+                        <i class="fab fa-facebook-square"></i>
                     </a>
                     <a href="https://twitter.com/memintan">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
                             <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
                         </svg>
-                        Twitter
                     </a>
                 </div>
             </div>
             <a href="#" class="brand">MEHMET EMIN TAN</a>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="../contact-page/">Contact</a></li>
-                    <!-- Add additional navigation items here -->
-                </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./">AboutMe</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="../contact-page/">Contact</a></li>
+                        <!-- Add additional navigation items here -->
+                    </ul>
 
-            </nav>
-        </header>
+                </nav>
+            </header>
         <main>
             <div class="profile-summary">
                 <img src="../images/favicon.png" alt="Mehmet Emin Tan" class="profile-photo">
@@ -124,40 +129,16 @@
 
                 <p></p>
 
-                <p>
-                    Hello, I am Mehmet Emin Tan, a QA Automation Engineer with a rich tapestry of experiences spanning over six years in the IT industry, specifically
-                    within the realms of Publishing, Finance, and CRM domains.
-                </p>
-                <p>
-                    Beyond my professional life, I am a person deeply passionate about helping others, which extends into both my work ethic and personal interests.
-                </p>
-
-                <p>
-                    Outside of my technical pursuits, I am an avid sports enthusiast with a particular penchant for soccer.
-                    Whether it's playing on the field or cheering from the sidelines, the thrill of the game enlivens me. I believe in the power of teamwork and strategy,
-                    lessons from the pitch that I bring to my professional endeavors.
-
-                    Movies are another avenue where I find relaxation and inspiration, often providing a fresh perspective or a burst of creativity.
-                    Additionally, spending quality time with my friends is one of my greatest joys; it's during these moments that I recharge and find balance.
-                </p>
-
-                <p>
-                    I won't claim to be the smartest person in the room, but I am confident in my unwavering dedication and work ethic.
-                    I am someone who is always eager to roll up his sleeves and put in the necessary effort to not just meet, but exceed expectations.
-
-                    The excitement of learning new things keeps me on my toes; it's the fuel that drives my passion for technology and innovation.
-                    In an environment where there's something new to learn, you'll find me at my happiest. I embrace change and growth, and I'm always on the lookout for
-                    the next challenge to tackle.
-
-                    In essence, I'm a hardworking, outgoing individual who thrives on collaboration, continuous learning, and seizing every opportunity to grow both professionally
-                    and personally.
-                </p>
 
                 <!-- Additional content -->
             </div>
 
         </main>
-
+        <script>
+            document.querySelector('.hamburger-menu').addEventListener('click', function() {
+                document.querySelector('.navigation').classList.toggle('active');
+            });
+        </script>
         <footer class="footer">
             <div class="left">
 
@@ -170,31 +151,33 @@
                 <a href="mailto:mehmetetan@gmail.com" class="email-link">
                     <i class="fas fa-envelope"></i> mehmetetan@gmail.com
                 </a>
+            </div>
+            <div class="right">
                 <div class="social-links-footer">
                     <a href="https://github.com/memintan">
-                        <i class="fab fa-github"></i>
+                        <i class="fab fa-github"></i>GitHub
                     </a>
                     <a href="https://www.linkedin.com/in/mehmetemintan">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-linkedin"></i>LinkedIn
                     </a>
                     <a href="https://www.instagram.com/memintan/">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram"></i>Instagram
                     </a>
                     <a href="https://www.facebook.com/memintan/">
-                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-facebook-square"></i>Facebook
                     </a>
                     <a href="https://twitter.com/memintan">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
                             <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
                         </svg>
+                        Twitter
                     </a>
                 </div>
-
             </div>
             <div class="container">
                 <p>&copy; 2023 Mehmet Emin Tan - MeTAN(CH4)</p>
-                <!-- Add additional footer content here -->
+            <!-- Add additional footer content here -->
             </div>
-        </footer>
+    </footer>
     </body>
 </html>
