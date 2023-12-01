@@ -598,9 +598,12 @@ body {
 }
 
 .project-details {
-    display: none;
+    display: none; /* Hidden by default */
+    width: 100%; /* Set the width of the details pop-up as a percentage of the card width */
+    max-width: 600px; /* Set a max-width to control the width on all screens */
     padding: 10px;
-    overflow-y: auto; /* Add scroll if content overflows */
+    overflow-y: auto; /* Allows for scrolling if the content is too long */
+    box-sizing: border-box; /* Ensures the padding is included in the width */
 }
 
 .btn-details, .btn-close {
@@ -630,6 +633,32 @@ body {
     color: #777;
     margin-bottom: 10px;
 }
+
+
+
+.overlay-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 0; left: 0; /* Full screen */
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Above other elements */
+}
+
+.overlay-content {
+    width: 70%; /* Adjust based on preference */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* For scrollable content */
+    max-height: 80%; /* Adjust based on preference */
+}
+
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
