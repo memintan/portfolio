@@ -509,3 +509,147 @@ body {
 /* Additional styles can be added below */
 /* ... */
 
+.hero .summary-container {
+    color: #fff; /* White color text for visibility */
+    max-width: 600px; /* Maximum width of the container */
+    margin: 10% auto; /* Center the container within the hero section */
+    padding: 20px; /* Padding for aesthetics */
+    text-align: center; /* Center the text */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9); /* Optional: soft white glow */
+    backdrop-filter: blur(5px); /* Optional: blur effect for see-through */
+}
+
+.hero .summary-container h2 {
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 2.5rem; /* Larger font size for the heading */
+}
+
+.hero .summary-container p {
+    font-size: 1.1rem; /* Comfortable reading size for summary */
+    margin-bottom: 10px; /* Space between paragraphs */
+    line-height: 1.4; /* Line height for better readability */
+}
+
+.summary-container li {
+    text-align: left; /* Aligns the text to the left */
+}
+
+@media (max-width: 768px) {
+    .hero .summary-container {
+        max-width: 90%; /* Increase width on smaller screens for better use of space */
+        margin-top: 15%; /* Increase margin-top for better positioning */
+    }
+    .hero .summary-container h1 {
+        font-size: 1.75rem; /* Adjust font size for headings */
+    }
+    .hero .summary-container p {
+        font-size: 0.9rem; /* Adjust font size for paragraphs */
+    }
+}
+
+/* Further responsive design adjustments for very small screens */
+@media (max-width: 480px) {
+    .hero .summary-container {
+        max-width: 95%; /* Further increase width on very small screens */
+        margin-top: 20%; /* Further increase margin-top for better positioning */
+    }
+}
+
+
+
+/* PROJECTS */
+
+.hero-projects {
+    text-align: center;
+    padding: 20px;
+    background: url('path_to_hero_background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.project-card {
+    width: 15%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+    min-height: 300px; /* Minimum height for all cards */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    max-height: 120px; /* Maximum height for images */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures image fits within the area without distortion */
+    margin: 0 auto; /* Center the image */
+}
+
+.project-details {
+    display: none;
+    padding: 10px;
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.btn-details, .btn-close {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.btn-close {
+    background-color: #ff4136;
+}
+
+.project-image {
+    max-width: 100%; /* Ensures the image does not exceed the width of the card */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Ensures the image takes up the entire width properly */
+    object-fit: contain; /* Ensures the entire image is visible, scaled down if needed */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.project-date, .project-date-details {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        width: 45%;
+        min-height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 90%;
+        min-height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
