@@ -67,21 +67,23 @@
             <section class="hero-projects">
                 <h1>My Projects</h1>
             </section>
+
+            <!-- Overlay Container for Project Details -->
+            <div id="overlay" class="overlay-container" style="display: none;">
+                <div class="overlay-content">
+                    <button class="btn-close" onclick="toggleOverlay()">Close</button>
+                    <!-- Dynamic content will be injected here -->
+                </div>
+            </div>
+
             <section class="projects-container">
-                <!-- Dotdash -->
+                <!-- Example Project Card: Dotdash -->
                 <div class="project-card">
                     <img src="../images/dotdash.png" alt="Dotdash Meredith Project" class="project-image">
                     <h3>QA Automation Engineer</h3>
                     <p class="project-date">July 2021 – Present</p>
                     <p>Developed a POM-based Automation Testing Framework enhancing QA processes.</p>
                     <button class="btn-details" onclick="toggleDetails('dotdash-meredith-details')">Learn More</button>
-                    <div id="dotdash-meredith-details" class="project-details">
-                        <p>
-                            As a QA Automation Engineer at Dotdash-Meredith, I designed and developed an Automation Testing Framework using Java, JavaScript, Selenium WebDriver, Junit, Nightwatch.js, Maven, and Gradle. I was responsible for analyzing system specifications to create and execute comprehensive Test Plans and Test Cases for automated testing. Additionally, I managed test automation execution in various environments as part of Continuous Integration with Jenkins and collaborated with the team using Bitbucket for version control.
-                        </p>
-                        <p class="project-date-details">July 2021 – Present</p>
-                        <button class="btn-close" onclick="toggleDetails('dotdash-meredith-details')">Close</button>
-                    </div>
                 </div>
                 <!-- Agile Pro -->
                 <div class="project-card">
@@ -90,13 +92,6 @@
                     <p class="project-date">June 2018 – June 2021</p>
                     <p>Engineered a POM-based Test Automation Framework to streamline CRM testing.</p>
                     <button class="btn-details" onclick="toggleDetails('agilepro-crm-details')">Learn More</button>
-                    <div id="agilepro-crm-details" class="project-details">
-                        <p>
-                            In my role as Test Automation Engineer at AgilePro CRM, I was instrumental in designing and implementing a Page Object Model (POM)-based Automation Testing Framework using Java, Selenium WebDriver, JUnit, and Cucumber. My contributions included developing frameworks for Smoke and Regression Test Suites, performing Cross Browser testing, and establishing a BDD approach with Cucumber. My efforts were pivotal in automating API testing and ensuring seamless integration into cloud environments.
-                        </p>
-                        <p class="project-date-details">June 2018 – June 2021</p>
-                        <button class="btn-close" onclick="toggleDetails('agilepro-crm-details')">Close</button>
-                    </div>
                 </div>
                 <!-- Symund -->
                 <div class="project-card">
@@ -105,13 +100,6 @@
                     <p class="project-date">September 2016 – May 2018</p>
                     <p>Enhanced QA processes through meticulous analysis and automation scripting.</p>
                     <button class="btn-details" onclick="toggleDetails('symund-details')">Learn More</button>
-                    <div id="symund-details" class="project-details">
-                        <p>
-                            At Symund, my role as QA Analyst involved developing and maintaining manual Test Cases, and creating automation scripts using the Page Object Model (POM) with Java, Selenium WebDriver, Maven, and TestNG. I played a key role in defect identification, documentation, and tracking, as well as collaborating with cross-functional teams to ensure high-quality software releases in line with Agile methodologies.
-                        </p>
-                        <p class="project-date-details">September 2016 – May 2018</p>
-                        <button class="btn-close" onclick="toggleDetails('symund-details')">Close</button>
-                    </div>
                 </div>
                 <!-- IND -->
                 <div class="project-card">
@@ -120,13 +108,6 @@
                     <p class="project-date">February 2014 – July 2016</p>
                     <p>Conducted comprehensive manual testing for municipal client websites.</p>
                     <button class="btn-details" onclick="toggleDetails('ind-software-details')">Learn More</button>
-                    <div id="ind-software-details" class="project-details">
-                        <p>
-                            During my tenure at IND Software, I focused on manual testing for various municipal client websites. My responsibilities included analyzing requirements and functional specifications to create detailed test cases for thorough coverage and actively participating in all stages of the SDLC and STLC. I utilized tools like Microsoft Excel for documenting and managing test cases, which was critical in maintaining the quality and reliability of client services.
-                        </p>
-                        <p class="project-date-details">February 2014 – July 2016</p>
-                        <button class="btn-close" onclick="toggleDetails('ind-software-details')">Close</button>
-                    </div>
                 </div>
                 <!-- Siemens -->
                 <div class="project-card">
@@ -135,20 +116,56 @@
                     <p class="project-date">January 2009 – December 2013</p>
                     <p>Managed diagnostics devices calibration and training across multiple locations.</p>
                     <button class="btn-details" onclick="toggleDetails('siemens-details')">Learn More</button>
-                    <div id="siemens-details" class="project-details">
-                        <p>
-                            As a Field Application Specialist at Siemens, I managed the calibration and control for diagnostic devices in six cities, ensuring all software was up-to-date and that users were well-trained on operations and maintenance. My role was pivotal in maintaining the precision and efficacy of critical diagnostic equipment.
-                        </p>
-                        <p class="project-date-details">January 2009 – December 2013</p>
-                        <button class="btn-close" onclick="toggleDetails('siemens-details')">Close</button>
-                    </div>
                 </div>
+                <!-- Add other project cards in a similar fashion -->
 
-
-
+                <!-- Hidden Details Section for Dotdash -->
+                <div id="dotdash-meredith-details" class="hidden-details" style="display: none;">
+                    <img src="../images/dotdash.png" alt="Dotdash Meredith Project" class="project-image">
+                    <h3>QA Automation Engineer</h3>
+                    <p class="project-date">July 2021 – Present</p>
+                    <p>
+                        As a QA Automation Engineer at Dotdash-Meredith, I designed and developed an Automation Testing Framework using Java, JavaScript, Selenium WebDriver, Junit, Nightwatch.js, Maven, and Gradle. I was responsible for analyzing system specifications to create and execute comprehensive Test Plans and Test Cases for automated testing. Additionally, I managed test automation execution in various environments as part of Continuous Integration with Jenkins and collaborated with the team using Bitbucket for version control.
+                    </p>
+                    <!-- Add more content as needed -->
+                </div>
+                <div id="agilepro-crm-details" class="hidden-details" style="display: none;">
+                    <img src="../images/agilePro.png" alt="AgilePro CRM Project" class="project-image">
+                    <h3>Test Automation Engineer</h3>
+                    <p class="project-date">June 2018 – June 2021</p>
+                    <p>
+                        In my role as Test Automation Engineer at AgilePro CRM, I was instrumental in designing and implementing a Page Object Model (POM)-based Automation Testing Framework using Java, Selenium WebDriver, JUnit, and Cucumber. My contributions included developing frameworks for Smoke and Regression Test Suites, performing Cross Browser testing, and establishing a BDD approach with Cucumber. My efforts were pivotal in automating API testing and ensuring seamless integration into cloud environments.
+                    </p>
+                    <!-- Add more content as needed -->
+                </div>
+                <div id="symund-details" class="hidden-details" style="display: none;">
+                    <img src="../images/Symund.png" alt="Symund QA Project" class="project-image">
+                    <h3>QA Analysis</h3>
+                    <p class="project-date">September 2016 – May 2018</p>
+                    <p>
+                        At Symund, my role as QA Analyst involved developing and maintaining manual Test Cases, and creating automation scripts using the Page Object Model (POM) with Java, Selenium WebDriver, Maven, and TestNG. I played a key role in defect identification, documentation, and tracking, as well as collaborating with cross-functional teams to ensure high-quality software releases in line with Agile methodologies.
+                    </p>
+                </div>
+                <div id="ind-software-details" class="hidden-details" style="display: none;">
+                    <img src="../images/ind.png" alt="IND Software Project" class="project-image">
+                    <h3>Manual Tester</h3>
+                    <p class="project-date">February 2014 – July 2016</p>
+                    <p>
+                        During my tenure at IND Software, I focused on manual testing for various municipal client websites. My responsibilities included analyzing requirements and functional specifications to create detailed test cases for thorough coverage and actively participating in all stages of the SDLC and STLC. I utilized tools like Microsoft Excel for documenting and managing test cases, which was critical in maintaining the quality and reliability of client services.
+                    </p>
+                </div>
+                <div id="siemens-details" class="hidden-details" style="display: none;">
+                    <img src="../images/siemens.png" alt="Siemens Field Application Specialist Project" class="project-image">
+                    <h3>Field Application Specialist</h3>
+                    <p class="project-date">January 2009 – December 2013</p>
+                    <p>
+                        As a Field Application Specialist at Siemens, I managed the calibration and control for diagnostic devices in six cities, ensuring all software was up-to-date and that users were well-trained on operations and maintenance. My role was pivotal in maintaining the precision and efficacy of critical diagnostic equipment.
+                    </p>
+                </div>
+                <!-- Add other hidden details sections for each project -->
             </section>
-
         </main>
+
         <script src="scripts.js"></script>
         <script>
                 document.querySelector('.hamburger-menu').addEventListener('click', function() {
