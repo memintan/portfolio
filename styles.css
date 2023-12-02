@@ -467,24 +467,11 @@ body {
 }
 
 
-
 /* Contact Page Specific Styles */
 .contact-page {
     font-family: 'Arial', sans-serif; /* Specific font for contact page */
     background-color: #787c82; /* Background color */
     margin-top: 10px; /* Top margin */
-}
-
-.contact-page .hero {
-    /* Styles for hero section on contact page */
-    height: 38vh; /* Height */
-    background-image: url('images/heroContact.png'); /* Background image */
-    background-size: 800px 400px; /* Size of the background image */
-    background-position: center; /* Center the background */
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Vertical alignment */
-    justify-content: center; /* Horizontal alignment */
-    background-color: #787c82; /* Background color */
 }
 
 @media (max-width: 768px) {
@@ -493,29 +480,48 @@ body {
     }
 }
 
-.contact-section {
-    width: 47%; /* Width of the section */
-    margin: 0 auto; /* Centering */
-    padding: 50px; /* Padding */
+/* Contact Page Specific Styles */
+.contact-page {
+    font-family: 'Arial', sans-serif; /* Specific font for contact page */
     background-color: #787c82; /* Background color */
+    margin-top: 10px; /* Top margin */
 }
 
-/* Contact Form Styles */
+.contact-hero {
+    background: url('images/heroContact.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-form {
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent or solid, adjust as needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Additional styling for the form */
+}
+
 #contact-form {
-    display: flex; /* Flex layout for the form elements */
-    flex-direction: column; /* Arrange elements vertically */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust as needed */
+    max-width: 500px; /* Adjust as needed */
 }
 
 #contact-form input, #contact-form textarea {
-    margin-bottom: 10px; /* Space below each input/textarea */
+    margin-bottom: 15px; /* Space below each input/textarea */
     padding: 10px; /* Padding inside input/textarea */
-    border: 5px solid #ccc; /* Border styling */
+    border: 3px solid #ccc; /* Border styling */
     border-radius: 8px; /* Rounded corners */
 }
 
 #contact-form button {
     padding: 10px 20px; /* Padding inside the button */
-    background-color: #007bff; /* Blue background */
+    background-color: #66b2ff; /* Blue background */
     color: white; /* White text */
     border: none; /* No border */
     border-radius: 8px; /* Rounded corners */
@@ -523,7 +529,7 @@ body {
 }
 
 #contact-form button:hover {
-    background-color: #b32d2e; /* Darker blue on hover */
+    background-color: #007bff; /* Darker blue on hover */
 }
 
 #message {
