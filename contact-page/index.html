@@ -67,7 +67,7 @@
         <main>
             <div class="contact-hero">
                 <!-- Assuming contact-hero is styled as your full-screen background -->
-                <form id="contact-form" class="centered-form" action="https://formspree.io/f/mgejjqlk" method="POST">
+                <form id="contact-form" class="centered-form" method="POST" onsubmit="handleSubmit(event)">
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                     <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
                     <!-- The "_replyto" name attribute is used by Formspree to set the reply-to email address -->
@@ -119,6 +119,10 @@
                 <!-- Add additional footer content here -->
             </div>
         </footer>
+
+        <script src="handleSubmit.js"></script>
+
+
 
         <script>
             document.querySelector('.hamburger-menu').addEventListener('click', function() {

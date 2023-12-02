@@ -743,6 +743,18 @@ main {
     }
 }
 
+.thanks {
+    max-width: 100%; /* Limit the width to the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Display as block */
+    margin: auto; /* Center the image horizontally and vertically */
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Position at half the height of the viewport */
+    left: 50%; /* Position at half the width of the viewport */
+    transform: translate(-50%, -50%); /* Adjust the position to truly center the image */
+    object-fit: contain; /* Ensures the full image is always visible */
+}
+
 
 
 
