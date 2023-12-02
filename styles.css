@@ -345,6 +345,7 @@ body {
     height: 100px; /* Example height for footer */
     width: 100%;
     bottom: 1px;
+    clear: both; /* This ensures that the footer is below all floated elements */
 }
 
 .container {
@@ -412,6 +413,61 @@ body {
     font-size: 2.0em; /* Larger icons */
 }
 
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack footer content vertically */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .footer .left, .footer .right {
+        width: 100%; /* Full width for stacked elements */
+        margin-bottom: 10px; /* Space between stacked elements */
+    }
+
+    .footer a, .footer p {
+        font-size: 0.8em; /* Smaller font size */
+    }
+
+    .footer .social-links-footer a i, .footer .social-links-footer a svg {
+        font-size: 1.5em; /* Adjust icon size */
+    }
+
+    .container {
+        width: 95%; /* Increase width to utilize more screen space */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the items */
+        text-align: center; /* Center align text */
+        padding: 15px; /* Adjust padding as needed */
+    }
+
+    .footer .left, .footer .right, .footer .social-links-footer, .container {
+        width: 100%; /* Full width for each section */
+        margin-bottom: 10px; /* Space between sections */
+    }
+
+    /* Optional: Adjust the order if needed */
+    .footer .left { order: 1; }
+    .footer .right { order: 2; }
+    .container { order: 3; }
+
+    /* Adjust font sizes and icon sizes as needed */
+    .footer a, .footer p {
+        font-size: 0.8em; /* Smaller font size */
+    }
+
+    .footer .social-links-footer a i, .footer .social-links-footer a svg {
+        font-size: 1.5em; /* Adjust icon size */
+    }
+}
+
+
+
 /* Contact Page Specific Styles */
 .contact-page {
     font-family: 'Arial', sans-serif; /* Specific font for contact page */
@@ -477,6 +533,10 @@ body {
     border: 1px solid #ccc; /* Border styling */
     border-radius: 8px; /* Rounded corners */
     resize: vertical; /* Allow only vertical resizing */
+}
+
+main {
+    margin-bottom: 80px; /* Adjust as needed to ensure enough space above footer */
 }
 
 /* About Me Page Styles */
@@ -581,6 +641,7 @@ body {
     margin: 10px;
     transition: transform 0.3s ease-in-out;
     min-height: 300px; /* Minimum height for all cards */
+    min-width: 250px; /* Set a minimum width for the cards */
     display: flex;
     flex-direction: column; /* Stack items vertically */
     justify-content: space-between; /* Distribute space evenly */
