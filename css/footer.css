@@ -19,8 +19,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 35%;
     margin-bottom: 10px; /* Gap between left and the next section */
+    gap: 15px;
 }
 
 /* Right Section */
@@ -65,7 +65,7 @@
 /* Responsive Styles for Social Links */
 @media (max-width: 768px) {
     .footer .left {
-        width: 73%;
+        gap: 15px;
     }
     .footer .right {
         flex-direction: row;
@@ -80,4 +80,10 @@
         flex-direction: column; /* Stack elements vertically */
         align-items: center; /* Center-align items */
     }
+    .footer .right {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
 }
