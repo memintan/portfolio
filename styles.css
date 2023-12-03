@@ -28,7 +28,7 @@ body {
     padding: 0; /* No padding */
 }
 
-/* Header Styles */
+/* HEADER */
 .header {
     position: sticky; /* Keeps the header at the top of the viewport */
     top: 0; /* Aligns to the top */
@@ -93,6 +93,9 @@ body {
 
 .contact-details a i, .social-links a i, .social-links a svg {
     margin-right: 10px; /* Space between icon and text */
+}
+.social-links a i, .social-links a svg {
+    font-size: 1.5em; /* Adjust as needed */
 }
 
 /* Navigation Styles */
@@ -329,145 +332,13 @@ body {
     margin-right: 3px; /* Space between icon and text */
 }
 
-/* Footer Styles */
-.footer {
-    display: flex;
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Vertical alignment */
-    position: fixed; /* Fixed at bottom */
-    background-color: #787c82; /* Dark grey background */
-    color: white; /* White text */
-    text-align: center; /* Centered text */
-    padding: 50px 10px; /* Padding */
-    bottom: 0; /* Bottom of viewport */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Above other elements */
-    height: 100px; /* Example height for footer */
-    width: 100%;
-    bottom: 1px;
-    clear: both; /* This ensures that the footer is below all floated elements */
-}
-
-.container {
-    position: absolute; /* Absolute positioning */
-    bottom: 0; /* At the bottom */
-    left: 50%; /* Centered horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    width: 80%; /* Width of the container */
-    max-width: 1200px; /* Maximum width */
-}
-
-/* Left Section of Footer */
-.footer .left {
-    position: absolute; /* Positions the element absolutely within its parent */
-    left: 50px; /* Positions the element 50 pixels from the left of its parent */
-    top: 50%; /* Positions the element at the vertical center of its parent */
-    transform: translateY(-50%); /* Adjusts the element's position to be truly centered vertically */
-    display: flex; /* Enables flexbox layout for the contents */
-    flex-direction: column; /* Stacks child elements vertically */
-    align-items: flex-start; /* Aligns child elements to the start (left) */
-}
-
-.footer .left a {
-    color: #fff; /* White links */
-    text-decoration: none; /* No underline */
-}
-
-.footer .left a i, .footer .left a svg {
-    margin-right: 10px; /* Space between icon and text */
-}
-.footer .left .home-link, .footer .left .phone-link, .footer .left .email-link {
-    font-weight: bold; /* Makes the text bold */
-}
-/* Increasing the size of the icons in these links */
-.footer .left .home-link i, .footer .left .phone-link i, .footer .left .email-link i {
-    font-size: 1.8em; /* Adjust the size as needed */
-}
-
-/* Right Section of Footer */
-.footer .right {
-    display: flex;
-    align-items: center; /* Vertical alignment */
-    justify-content: flex-end; /* Align to end (right) */
-    flex-grow: 1;
-}
-
-.footer .right .social-links-footer {
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Vertical alignment */
-    justify-content: flex-start; /* Start alignment */
-    margin-left: auto;
-}
-
-.footer .right .social-links-footer a {
-    display: inline-flex; /* Inline flexbox */
-    align-items: center; /* Vertical alignment */
-    margin-right: 10px; /* Space between icons */
-    text-decoration: none; /* No underline */
-    color: #fff; /* White links */
-}
-
-.footer .right .social-links-footer a i,
-.footer .right .social-links-footer a svg {
-    margin-right: 5px; /* Space between icon and text */
-    font-size: 2.0em; /* Larger icons */
-}
-
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column; /* Stack footer content vertically */
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
-
-    .footer .left, .footer .right {
-        width: 100%; /* Full width for stacked elements */
-        margin-bottom: 10px; /* Space between stacked elements */
-    }
-
-    .footer a, .footer p {
-        font-size: 0.8em; /* Smaller font size */
-    }
-
-    .footer .social-links-footer a i, .footer .social-links-footer a svg {
-        font-size: 1.5em; /* Adjust icon size */
-    }
-
-    .container {
-        width: 95%; /* Increase width to utilize more screen space */
-    }
-}
-
-@media (max-width: 480px) {
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center align the items */
-        text-align: center; /* Center align text */
-        padding: 15px; /* Adjust padding as needed */
-    }
-
-    .footer .left, .footer .right, .footer .social-links-footer, .container {
-        width: 100%; /* Full width for each section */
-        margin-bottom: 10px; /* Space between sections */
-    }
-
-    /* Optional: Adjust the order if needed */
-    .footer .left { order: 1; }
-    .footer .right { order: 2; }
-    .container { order: 3; }
-
-    /* Adjust font sizes and icon sizes as needed */
-    .footer a, .footer p {
-        font-size: 0.8em; /* Smaller font size */
-    }
-
-    .footer .social-links-footer a i, .footer .social-links-footer a svg {
-        font-size: 1.5em; /* Adjust icon size */
-    }
-}
 
 
-/* Contact Page Specific Styles */
+
+
+
+
+/* CONTACT PAGE */
 .contact-page {
     font-family: 'Arial', sans-serif; /* Specific font for contact page */
     background-color: #787c82; /* Background color */
@@ -542,10 +413,11 @@ body {
 }
 
 main {
-    margin-bottom: 80px; /* Adjust as needed to ensure enough space above footer */
+    margin-bottom: 0; /* Removes bottom margin */
+    padding-bottom: 0; /* Removes bottom padding */
 }
 
-/* About Me Page Styles */
+/* ABOUT ME Page Styles */
 .aboutme-page main {
     background-image: url('images/aboutMe.png'); /* Background image for the main content */
     background-attachment: fixed; /* Fixed background image */
@@ -630,7 +502,7 @@ main {
 .hero-projects {
     text-align: center;
     padding: 20px;
-    background: url('path_to_hero_background.jpg') no-repeat center center;
+    /*background: url('images/projects.png') no-repeat center center;*/
     background-size: cover;
 }
 
