@@ -22,3 +22,7 @@ main {
     display: block;
     object-fit: contain;
 }
+
+.footer .right {
+    margin-bottom: 40px !important; /* Increased bottom margin */
+}
