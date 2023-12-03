@@ -500,10 +500,10 @@ main {
 /* PROJECTS */
 
 .hero-projects {
-    text-align: center;
     padding: 20px;
     /*background: url('images/projects.png') no-repeat center center;*/
     background-size: cover;
+    min-height: 80vh; /* Adjust as needed */
 }
 
 .projects-container {
