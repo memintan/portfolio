@@ -3,7 +3,7 @@
     position: sticky; /* Keeps the header at the top of the viewport */
     top: 0; /* Aligns to the top */
     z-index: 1000; /* Ensures the header stays above other content */
-    background: #787c82; /* Sets a dark grey background */
+    background: #2a3439; /* Sets a dark grey background */
     color: #fff; /* White text color for contrast */
     padding: 0.4rem 0; /* Vertical padding for aesthetic spacing */
     display: flex; /* Enables flexible box layout */
