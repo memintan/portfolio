@@ -53,7 +53,7 @@ public class WeatherService {
 
 
 
-    // Rest of your class code...
+    // Rest
 
     public static void main(String[] args) {
         try {
