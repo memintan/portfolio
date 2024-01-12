@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer{
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/weather/**").allowedOrigins("http://localhost:63342"); // Adjust the port if needed
+                registry.addMapping("/weather/**").allowedOrigins("https://memintan.github.io"); // Adjust the port if needed
             }
         };
     }
