@@ -1,0 +1,28 @@
+/* General Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Adjust as needed */
+}
+
+.thanks {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.footer .right {
+    margin-bottom: 40px !important; /* Increased bottom margin */
+}

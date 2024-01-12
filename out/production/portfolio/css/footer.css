@@ -1,0 +1,111 @@
+/* Footer General Styles */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #2a3439; /* Example background color */
+    color: white;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+    padding: 10px 0; /* Padding for top and bottom of the footer */
+}
+
+/* Left Section */
+.footer .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Gap between left and the next section */
+    gap: 15px;
+}
+
+/* Right Section */
+.footer .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px; /* Gap between right and the container section */
+}
+
+/* Container (Bottom Section) */
+.footer .container {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Link Styles */
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Adjust spacing between links */
+}
+
+.footer i, .footer svg {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Additional styles for icons */
+.fas, .fab {
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+.bi-twitter-x {
+    fill: #1DA1F2;
+}
+
+.home-link{
+    margin-left: -7px;
+}
+
+/* Link Styles */
+.phone-link, .home-link, .email-link {
+    color: #fff; /* White text */
+    text-decoration: none; /* No underline */
+}
+
+/* Icon Styles */
+.fas.fa-mobile-alt, .fas.fa-home {
+    color: #fff; /* White icons */
+    margin-right: 3px; /* Space between icon and text */
+    margin-left: 5px; /* Space before icon */
+}
+
+.email-link .fas {
+    margin-right: 3px; /* Space between icon and text */
+}
+
+
+/* Responsive Styles for Social Links */
+@media (max-width: 768px) {
+    .footer .left {
+        gap: 15px;
+    }
+    .footer .right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .left {
+        width: 73%; /* Maintain the width from the previous media query */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align items */
+    }
+    .footer .right {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+}

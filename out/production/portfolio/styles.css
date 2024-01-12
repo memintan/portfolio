@@ -1,0 +1,353 @@
+/* Base Element Styles */
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* Common font for consistency */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Universal Box Sizing */
+*, *:before, *:after {
+    box-sizing: border-box; /* Ensures padding does not affect total width/height */
+}
+
+/* Body Style */
+body {
+    color: #555; /* Default text color */
+    line-height: 1.6; /* Default line height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+}
+
+
+/* Hero Section Styles */
+/* Adjusting Hero Section */
+.hero {
+    position: relative; /* Relative positioning within the normal document flow */
+    background: url('images/hero.png') no-repeat center center;
+    background-size: contain; /* Cover the entire area without distorting the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px; /* Space for the header; adjust as per your header's height */
+    margin-bottom: 0px; /* Space for the footer; adjust as per your footer's height */
+    min-height: calc(100vh - 200px); /* Adjust total height to account for header and footer */
+    background-color: #121212;
+}
+
+/* Adjustments for the ::before pseudo-element */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Mobile Responsiveness for Hero */
+@media (max-width: 768px) {
+    .hero {
+            height: calc(100vh - (smaller-header-height + smaller-footer-height));
+            top: smaller-header-height; /* Adjust for smaller header height on mobile devices */
+        }
+}
+
+
+/* CONTACT PAGE */
+.contact-page {
+    font-family: 'Arial', sans-serif; /* Specific font for contact page */
+    background-color: #2a3439; /* Background color */
+    margin-top: 10px; /* Top margin */
+}
+
+@media (max-width: 768px) {
+    .contact-page .hero {
+        height: 30vh; /* Shorter height on mobile */
+    }
+}
+
+/* Contact Page Specific Styles */
+.contact-page {
+    font-family: 'Arial', sans-serif; /* Specific font for contact page */
+    background-color: #2a3439; /* Background color #787c82 */
+    margin-top: 10px; /* Top margin */
+}
+
+.contact-hero {
+    background: url('images/heroContact.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-form {
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent or solid, adjust as needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Additional styling for the form */
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust as needed */
+    max-width: 500px; /* Adjust as needed */
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 15px; /* Space below each input/textarea */
+    padding: 10px; /* Padding inside input/textarea */
+    border: 3px solid #ccc; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#contact-form button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #66b2ff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#contact-form button:hover {
+    background-color: #007bff; /* Darker blue on hover */
+}
+
+#message {
+    width: 100%; /* Full width of the container */
+    height: 100px; /* Fixed height */
+    padding: 10px; /* Padding inside the textarea */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
+    resize: vertical; /* Allow only vertical resizing */
+}
+
+main {
+    margin-bottom: 0; /* Removes bottom margin */
+    padding-bottom: 0; /* Removes bottom padding */
+}
+
+/* ABOUT ME Page Styles */
+.aboutme-page main {
+    background-image: url('images/aboutMe.png'); /* Background image for the main content */
+    background-attachment: fixed; /* Fixed background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    color: #333; /* Dark color for text */
+    padding: 50px 20px; /* Padding around the content */
+    font-family: 'Outfit', sans-serif; /* Consistent font with the brand */
+    min-height: 100vh; /* Minimum height to cover full viewport */
+}
+
+.profile-summary {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the summary box */
+    margin: 20px 0; /* Margin above and below the summary box */
+}
+
+.profile-photo {
+    width: 150px; /* Width of the photo */
+    height: auto; /* Auto height to maintain aspect ratio */
+    border-radius: 50%; /* Circular shape */
+    float: left; /* Float to the left side */
+    margin-right: 20px; /* Margin to the right of the photo */
+}
+
+/* Additional styles can be added below */
+/* ... */
+
+.hero .summary-container {
+    color: #fff; /* White color text for visibility */
+    max-width: 600px; /* Maximum width of the container */
+    margin: 10% auto; /* Center the container within the hero section */
+    padding: 20px; /* Padding for aesthetics */
+    text-align: center; /* Center the text */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9); /* Optional: soft white glow */
+    backdrop-filter: blur(5px); /* Optional: blur effect for see-through */
+}
+
+.hero .summary-container h2 {
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 2.5rem; /* Larger font size for the heading */
+}
+
+.hero .summary-container p {
+    font-size: 1.1rem; /* Comfortable reading size for summary */
+    margin-bottom: 10px; /* Space between paragraphs */
+    line-height: 1.4; /* Line height for better readability */
+}
+
+.summary-container li {
+    text-align: left; /* Aligns the text to the left */
+}
+
+@media (max-width: 768px) {
+    .hero .summary-container {
+        max-width: 90%; /* Increase width on smaller screens for better use of space */
+        margin-top: 15%; /* Increase margin-top for better positioning */
+    }
+    .hero .summary-container h1 {
+        font-size: 1.75rem; /* Adjust font size for headings */
+    }
+    .hero .summary-container p {
+        font-size: 0.9rem; /* Adjust font size for paragraphs */
+    }
+}
+
+/* Further responsive design adjustments for very small screens */
+@media (max-width: 480px) {
+    .hero .summary-container {
+        max-width: 95%; /* Further increase width on very small screens */
+        margin-top: 20%; /* Further increase margin-top for better positioning */
+    }
+}
+
+
+
+/* PROJECTS */
+
+.hero-projects {
+    padding: 20px;
+    /*background: url('images/projects.png') no-repeat center center;*/
+    background-size: cover;
+    min-height: 80vh; /* Adjust as needed */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.project-card {
+    width: 15%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+    min-height: 300px; /* Minimum height for all cards */
+    min-width: 250px; /* Set a minimum width for the cards */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    max-height: 120px; /* Maximum height for images */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures image fits within the area without distortion */
+    margin: 0 auto; /* Center the image */
+}
+
+.project-details {
+    display: none; /* Hidden by default */
+    width: 100%; /* Set the width of the details pop-up as a percentage of the card width */
+    max-width: 600px; /* Set a max-width to control the width on all screens */
+    padding: 10px;
+    overflow-y: auto; /* Allows for scrolling if the content is too long */
+    box-sizing: border-box; /* Ensures the padding is included in the width */
+}
+
+.btn-details, .btn-close {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.btn-close {
+    background-color: #ff4136;
+}
+
+.project-image {
+    max-width: 100%; /* Ensures the image does not exceed the width of the card */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Ensures the image takes up the entire width properly */
+    object-fit: contain; /* Ensures the entire image is visible, scaled down if needed */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.project-date, .project-date-details {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+
+
+.overlay-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 0; left: 0; /* Full screen */
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Above other elements */
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 70%; /* Adjust based on preference */
+    max-height: 80%; /* Maximum height */
+    overflow-y: auto; /* For scrollable content */
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        width: 45%;
+        min-height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 90%;
+        min-height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+

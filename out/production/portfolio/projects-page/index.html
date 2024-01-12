@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="project-page">
+        <header class="header">
+            <div class="contact-info">
+                <div class="contact-details">
+                    <a href="mailto:mehmetetan@gmail.com" class="email-link">
+                        <i class="fas fa-envelope"></i> mehmetetan@gmail.com
+                    </a>
+
+                    <a href="tel:+18328556339" class="phone-link">
+                        <i class="fas fa-mobile-alt"></i> +1 (832) 855 6339
+                    </a>
+                </div>
+                <div class="social-links">
+                    <br>
+
+                    <a href="https://github.com/memintan" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mehmetemintan" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/memintan/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/memintan" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="https://twitter.com/memintan" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="brand">MEHMET EMIN TAN</a>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../aboutme-page/">AboutMe</a></li>
+                    <li><a href="./">Projects</a></li>
+                    <li><a href="../contact-page/">Contact</a></li>
+                    <!-- Add additional navigation items here -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="hero-projects">
+                <h1>My Projects</h1>
+
+
+                <!-- Overlay Container for Project Details -->
+                <div id="overlay" class="overlay-container" style="display: none;">
+                    <div class="overlay-content">
+                        <button class="btn-close" onclick="toggleOverlay()">Close</button>
+                        <!-- Dynamic content will be injected here -->
+                    </div>
+                </div>
+
+                <section class="projects-container">
+                    <!-- Example Project Card: Dotdash -->
+                    <div class="project-card">
+                        <img src="../images/dotdash.png" alt="Dotdash Meredith Project" class="project-image">
+                        <h3>Dotdash-Meredith | New York, NY</h3>
+                        <h4>QA Automation Engineer</h4>
+                        <p class="project-date">July 2021 – Present</p>
+                        <button class="btn-details" onclick="toggleDetails('dotdash-meredith-details')">Learn More</button>
+                    </div>
+                    <!-- Agile Pro -->
+                    <div class="project-card">
+                        <img src="../images/agilePro.png" alt="AgilePro CRM Project" class="project-image">
+                        <h3>AgilePro CRM | Tysons, VA</h3>
+                        <h4>Test Automation Engineer</h4>
+                        <p class="project-date">June 2018 – June 2021</p>
+                        <button class="btn-details" onclick="toggleDetails('agilepro-crm-details')">Learn More</button>
+                    </div>
+                    <!-- Symund -->
+                    <div class="project-card">
+                        <img src="../images/Symund.png" alt="Symund QA Project" class="project-image">
+                        <h3>Symund | Tysons, VA</h3>
+                        <h4>QA Analysis</h4>
+                        <p class="project-date">September 2016 – May 2018</p>
+                        <button class="btn-details" onclick="toggleDetails('symund-details')">Learn More</button>
+                    </div>
+                    <!-- IND -->
+                    <div class="project-card">
+                        <img src="../images/ind.png" alt="IND Software Project" class="project-image">
+                        <h3>IND Software AS | Istanbul, TR</h3>
+                        <h3>Manual Tester</h3>
+                        <p class="project-date">February 2014 – July 2016</p>
+                        <button class="btn-details" onclick="toggleDetails('ind-software-details')">Learn More</button>
+                    </div>
+                    <!-- Siemens -->
+                    <div class="project-card">
+                        <img src="../images/siemens.png" alt="Siemens Field Application Specialist Project" class="project-image">
+                        <h3>Siemens | Ankara, TR</h3>
+                        <h3>Field Application Specialist</h3>
+                        <p class="project-date">January 2009 – December 2013</p>
+                        <button class="btn-details" onclick="toggleDetails('siemens-details')">Learn More</button>
+                    </div>
+                    <!-- Add other project cards in a similar fashion -->
+
+                    <!-- Hidden Details Section for Dotdash -->
+                    <div id="dotdash-meredith-details" class="hidden-details" style="display: none;">
+                        <img src="../images/dotdash.png" alt="Dotdash Meredith Project" class="project-image">
+                        <h3>QA Automation Engineer</h3>
+                        <p class="project-date">July 2021 – Present</p>
+                        <p>
+                            &rarr; As a QA Automation Engineer at Dotdash-Meredith, I uphold the quality of top culinary sites like Liquor.com, SeriousEats.com, SimplyRecipes.com, TheSpruceEats.com and FoodAndWine.com.
+                        </p>
+                        <p>
+                            &rarr; My daily routine encompasses rigorous regression test analysis, issue resolution, and collaborative scrum participation.
+                        </p>
+                        <p>
+                            &rarr; I actively engage in the design and development of a robust Page Object Model (POM)-based Automation Testing Framework, utilizing a diverse tech stack comprising Java, JavaScript, Selenium WebDriver, JUnit, Nightwatch.js, Maven, and Gradle.
+                        </p>
+                        <p>
+                            &rarr; Utilizing Selenium Grid, I orchestrate test executions across various platforms, enhancing our Continuous Integration efforts with Jenkins.
+                        </p>
+                        <p>
+                            &rarr; Our QA team's dedication lies in delivering an intuitive and flawless digital experience for every user.
+                        </p>
+                        <!-- Add more content as needed -->
+                    </div>
+                    <div id="agilepro-crm-details" class="hidden-details" style="display: none;">
+                        <img src="../images/agilePro.png" alt="AgilePro CRM Project" class="project-image">
+                        <h3>Test Automation Engineer</h3>
+                        <p class="project-date">June 2018 – June 2021</p>
+                        <p>
+                            &rarr; Leveraging Java and Selenium WebDriver, I spearheaded the design and deployment of a Page Object Model (POM)-based Automation Testing Framework, enhancing the quality assurance processes for AgilePro CRM, a collaboration platform. My frameworks facilitated efficient Smoke and Regression Testing across multiple browsers, with a focus on BDD using Cucumber and Gherkin for clear, behavioral specifications.
+                        </p>
+                        <p>
+                            &rarr; In a hybrid testing environment, I managed a suite of tools including driver scripts, page objects, and advanced reporting functionalities. My SQL expertise was pivotal in executing database validations, complemented by manual API testing via Postman and automated RESTful testing with the REST Assured library.
+                        </p>
+                        <p>
+                            &rarr; My engagement with Jenkins, alongside version control with Git/GitHub, supported a streamlined CI/CD pipeline. While my experience with mobile automation through Appium was limited, it contributed to our comprehensive testing strategy.
+                        </p>
+
+                        <p>
+                            &rarr; Within an Agile framework, I actively contributed to sprint planning and review sessions, ensuring the AgilePro CRM platform's functionality met the highest standards.
+                        </p>
+                        <!-- Add more content as needed -->
+                    </div>
+                    <div id="symund-details" class="hidden-details" style="display: none;">
+                        <img src="../images/Symund.png" alt="Symund QA Project" class="project-image">
+                        <h3>QA Analyst</h3>
+                        <p class="project-date">September 2016 – May 2018</p>
+                        <p>
+                            &rarr; As a QA Analyst at Symund, I was instrumental in developing and executing comprehensive manual test cases within the SDLC and STLC frameworks. My focus was to ensure that our software met rigorous quality standards from inception to deployment.
+                        </p>
+                        <p>
+                            &rarr; Leveraging the Page Object Model, Java, and Selenium WebDriver, I designed automation scripts that enhanced our testing processes. Maven and TestNG were integral to my toolkit, streamlining our test execution and maintenance.
+                        </p>
+                        <p>
+                            &rarr; In defect management, I used Jira to identify, document, and track bugs, collaborating with developers to expedite issue resolution and maintain software integrity.
+                        </p>
+                        <p>
+                            &rarr; I collaborated closely with cross-functional teams, upholding high-quality software releases. This team synergy was pivotal for our project's success, aligning development goals with quality benchmarks.
+                        </p>
+                        <p>
+                            &rarr; Embracing Agile Testing Methodology, I actively contributed to all Agile ceremonies. My engagement facilitated adaptive planning, evolutionary development, and continuous improvement.
+                        </p>
+                    </div>
+                    <div id="ind-software-details" class="hidden-details" style="display: none;">
+                        <img src="../images/ind.png" alt="IND Software Project" class="project-image">
+                        <h3>Manual Tester</h3>
+                        <p class="project-date">February 2014 – July 2016</p>
+                        <p>
+                            &rarr; At IND Software, I was at the forefront of manual testing for municipal client websites, meticulously crafting test cases from detailed functional specifications.
+                        </p>
+                        <p>
+                            &rarr; My journey here deepened my adaptation for the SDLC and STLC, laying a foundational understanding that became instrumental in my future projects.
+                        </p>
+                        <p>
+                            &rarr; Expertly navigating Microsoft Excel, I managed test documentation with precision, ensuring that our testing processes were both thorough and efficient.
+                        </p>
+
+                        <p>
+                            &rarr; My tenure at IND Software was a pivotal chapter in my career; It strengthened my learning in quality assurance and paved the way for future experiences in this field.
+                        </p>
+                    </div>
+                    <div id="siemens-details" class="hidden-details" style="display: none;">
+                        <img src="../images/siemens.png" alt="Siemens Field Application Specialist Project" class="project-image">
+                        <h3>Field Application Specialist</h3>
+                        <p class="project-date">January 2009 – December 2013</p>
+                        <p>
+                            &rarr; At Siemens, my role as a Field Application Specialist centered around the meticulous calibration and control of diagnostic devices for desktop applications. Stationed across six cities, I ensured that each device operated at peak precision, a vital factor in the accuracy of diagnostics.
+                        </p>
+                        <p>
+                            &rarr; I was responsible for keeping the software on these devices rigorously up-to-date, conducting regular checks and installing updates as necessary. This task was crucial in maintaining the functionality and security of the diagnostic tools.
+                        </p>
+                        <p>
+                            &rarr; Training end-users was another cornerstone of my duties. I equipped them with comprehensive knowledge on the operation and maintenance of these sophisticated devices, empowering them to utilize the technology effectively.
+                        </p>
+                        <p>
+                            &rarr; It was imperative that each calibration and control test I conducted adhered to Siemens' stringent standards for quality and reliability.
+                        </p>
+                        <p>
+                            &rarr; This experience at Siemens laid a rich foundation for my expertise in managing and optimizing medical diagnostic tools, significantly contributing to the efficiency of healthcare services across multiple locations.
+                        </p>
+                    </div>
+                    <!-- Add other hidden details sections for each project -->
+                </section>
+            </div>
+        </main>
+
+        <script src="scripts.js"></script>
+        <script>
+                document.querySelector('.hamburger-menu').addEventListener('click', function() {
+                    document.querySelector('.navigation').classList.toggle('active');
+                });
+        </script>
+        <footer class="footer">
+            <div class="left">
+
+                <a href="https://www.google.com/maps/place/Houston,+TX/@29.8173647,-95.7309448,10z/data=!3m1!4b1!4m6!3m5!1s0x8640b8b4488d8501:0xca0d02def365053b!8m2!3d29.7604267!4d-95.3698028!16zL20vMDNsMm4?entry=ttu" class="home-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-home"></i> Houston, TX
+                </a>
+                <a href="tel:+18328556339" class="phone-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-mobile-alt"></i> +1 (832) 855 6339
+                </a>
+                <a href="mailto:mehmetetan@gmail.com" class="email-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope"></i> mehmetetan@gmail.com
+                </a>
+            </div>
+            <div class="right">
+
+                <a href="https://github.com/memintan" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/mehmetemintan" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>LinkedIn
+                </a>
+                <a href="https://www.instagram.com/memintan/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>Instagram
+                </a>
+                <a href="https://www.facebook.com/memintan/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-square"></i>Facebook
+                </a>
+                <a href="https://twitter.com/memintan" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                    </svg>
+                    Twitter
+                </a>
+
+            </div>
+            <div class="container">
+                <p>&copy; 2023 Mehmet Emin Tan - MeTAN(CH4)</p>
+                <!-- Add additional footer content here -->
+            </div>
+        </footer>
+        <a title="Web Analytics" href="https://clicky.com/101435860"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script async data-id="101435860" src="//static.getclicky.com/js"></script>
+
+    </body>
+</html>
