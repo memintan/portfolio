@@ -8,6 +8,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import org.json.JSONObject;
+
 @Service
 public class WeatherService {
     private String weatherApiKey;
@@ -21,26 +23,9 @@ public class WeatherService {
         client = HttpClient.newHttpClient();
     }
 
-    public String getWeatherData() throws IOException, InterruptedException {
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.tomorrow.io/v4/timelines"))
-                .header("apikey", weatherApiKey)
-                // ... other headers or parameters
-                .build();
-
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        String responseBody = response.body();
-        // Process the response body here
-        return responseBody; // Return the response body for further processing
-    }
-
-    public String getWeatherData(String location) throws IOException, InterruptedException {
-        // Define required parameters for the API call
-        String fields = "temperature,weatherCode";
-
-        // Construct the URI with query parameters for realtime data
-        String uri = String.format("https://api.tomorrow.io/v4/weather/realtime?location=%s&fields=%s&apikey=%s",
-                location, fields, weatherApiKey);
+    public String getWeatherData(String lat, String lon) throws IOException, InterruptedException {
+        String uri = String.format("https://api.tomorrow.io/v4/weather/realtime?location=%s,%s&apikey=%s",
+                lat, lon, weatherApiKey);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(uri))
@@ -48,21 +33,22 @@ public class WeatherService {
                 .build();
 
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        return response.body();
-    }
+        JSONObject jsonResponse = new JSONObject(response.body());
 
-
-
-    // Rest
-
-    public static void main(String[] args) {
-        try {
-            WeatherService weather = new WeatherService();
-            String location = "77406"; // Richmond
-            String weatherData = weather.getWeatherData(location);
-            System.out.println("Weather Data: " + weatherData);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+        // Check if the response contains the location name and add it
+        if (jsonResponse.getJSONObject("location").has("name")) {
+            String locationName = jsonResponse.getJSONObject("location").getString("name");
+            jsonResponse.put("locationName", locationName); // Add location name to the response
         }
+
+        return jsonResponse.toString();
     }
+
+
 }
+
+
+
+
+
+

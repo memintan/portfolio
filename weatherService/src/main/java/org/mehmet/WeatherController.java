@@ -19,10 +19,10 @@ public class WeatherController {
         this.weatherService = weatherService;
     }
 
-    @GetMapping("/weather/{location}")
-    public ResponseEntity<String> getWeather(@PathVariable String location) {
+    @GetMapping("/weather/{lat},{lon}")
+    public ResponseEntity<String> getWeather(@PathVariable String lat, @PathVariable String lon) {
         try {
-            String weatherData = weatherService.getWeatherData(location);
+            String weatherData = weatherService.getWeatherData(lat, lon);
             return ResponseEntity.ok(weatherData);
         } catch (Exception e) {
             logger.error("Error fetching weather data", e);

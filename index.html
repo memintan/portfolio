@@ -7,10 +7,10 @@
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-        <link rel="manifest" href="/site.webmanifest">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="weather/weather.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 
@@ -67,7 +67,11 @@
         </header>
         <main>
             <section class="hero">
-                <div class="summary-container">
+                <section class="weather-section">
+                    <h2 id="location-name">Loading location...</h2>
+                    <div id="weather-data">Loading weather data...</div>
+                </section>
+                <section class="summary-container">
                     <h2>QA Automation Engineer</h2>
                     <p>6+ years in the IT industry.</p>
 
@@ -79,7 +83,7 @@
 
                     <h3><u>Innovation & Collaboration</u></h3>
                     <p>Advocating for Continuous Integration and rigorous Quality Assurance within dynamic Agile environments.</p>
-                </div>
+                </section>
             </section>
         </main>
 
@@ -131,6 +135,8 @@
         </footer>
         <a title="Web Analytics" href="https://clicky.com/101435860"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
         <script async data-id="101435860" src="//static.getclicky.com/js"></script>
+        <script src="weather/fetchWeather.js"></script>
+
 
     </body>
 </html>

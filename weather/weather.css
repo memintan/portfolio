@@ -1,0 +1,27 @@
+.weather-section {
+    padding: 5px; /* Inner space between the content and border of the element */
+    margin: 10px auto; /* Vertical margin is 10px, horizontal margins are automatic (centers the element) */
+    color: #fff; /* Sets the text color to white */
+
+    position: absolute; /* Positions the element absolutely relative to its first positioned ancestor */
+    top: 0px; /* Positions the element 10px from the top of its parent container */
+    left: 50%; /* Positions the center of the element at the halfway mark of its parent */
+    transform: translateX(-50%); /* Shifts the element to the left by half its width to center it */
+    width: 80%; /* Sets the width of the element to 80% of its parent container */
+    z-index: 10; /* Ensures the element is placed above other elements in the stacking context */
+}
+
+@media (max-width: 768px) {
+    .weather-section {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .weather-section {
+        width: 95%;
+   }
+}
+
+

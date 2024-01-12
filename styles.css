@@ -219,7 +219,7 @@ main {
 @media (max-width: 480px) {
     .hero .summary-container {
         max-width: 95%; /* Further increase width on very small screens */
-        margin-top: 20%; /* Further increase margin-top for better positioning */
+        margin-top: 30%; /* Further increase margin-top for better positioning */
     }
 }
 
