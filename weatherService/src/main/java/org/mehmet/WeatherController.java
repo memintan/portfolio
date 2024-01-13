@@ -30,4 +30,5 @@ public class WeatherController {
             return ResponseEntity.internalServerError().build();
         }
     }
+
 }
